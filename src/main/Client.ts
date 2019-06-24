@@ -1000,8 +1000,11 @@ export class Client implements EventEmitter {
     // also wait until your friends list is completely loaded.
     public connectAndWaitForModels() {
         return new Promise((resolve, reject) => {
+            logWithLevel(LogLevel.INFO, `aaaaonce`);
             this.once("CLIENT_MODELSLOADED", resolve);
+            logWithLevel(LogLevel.INFO, `sxxxxconnect`);
             this.connect(true);
+             logWithLevel(LogLevel.INFO, `connect----`);
         });
     }
 
