@@ -108,7 +108,7 @@ export class Client implements EventEmitter {
     //
     // This is an internal method, don't call it directly.
     private _packetReceived(packet: Packet): void {
-        logWithLevel(LogLevel.TRACE, packet.toString());
+        logWithLevel(LogLevel.DEBUG, packet.toString());
         // @TODO - Consider incrementing this counter only on SESSIONSTATE packets
         this.trafficCounter++;
 
